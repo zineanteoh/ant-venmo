@@ -18,8 +18,8 @@ await delay(120000)
 
 // Select user to pay
 await page.goto("https://account.venmo.com/pay")
-await page.type("#search-input", "@Nicholas-Gebo-2");
-await (await page.waitForSelector("img[alt='Nicholas-Gebo-2']")).click()
+await page.type("#search-input", "@Zi-Teoh");
+await (await page.waitForSelector("img[alt='Zi-Teoh']")).click()
 
 // Set up payment details
 await page.type("#payment-note", "🐜")
