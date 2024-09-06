@@ -23,7 +23,7 @@ await (await page.waitForSelector("img[alt='Nicholas-Gebo-2']")).click()
 
 // Set up payment details
 await page.type("#payment-note", "🐜")
-await page.type("input[aria-label='Amount']", "0.01")
+await page.type("input[aria-label='Amount']", "999.00")
 await page.evaluate(() => {
     document.querySelectorAll("button").forEach((button) => {
         if (button.textContent === "Pay") {
@@ -39,7 +39,7 @@ await page.waitForSelector("#select-destination");
 await page.evaluate(() => {
     document.querySelectorAll("button").forEach((button) => {
         console.log(button.textContent)
-        if (button.textContent === "Pay Nicholas Gebo $0.01") {
+        if (button.textContent === "Pay Nicholas Gebo $999.00") {
             button.click()
         }
     });
